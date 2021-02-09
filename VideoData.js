@@ -38,7 +38,7 @@ const UploadVideoData = async () =>{
     try{
         let resp = await fetchYoutubeApi(ApiKeys[apiIndex]);
         while(resp.errors){
-            if(apiIndex>2)
+            if(apiIndex>=ApiKeys.length)
                 return;
             resp = await fetchYoutubeApi(ApiKeys[++apiIndex]);
         }
@@ -69,7 +69,7 @@ const getVideoData = async (req,res) =>{
         await mysql.connect()
 
         //select results for the required page number,if we got invalid page number or result per page it will set it to default
-        let query = `SELECT * FROM VideoData ORDER BY PublishTime DESC LIMIT ${Math.max(10,res_per_page)} offset ${Math.max(0,offset)}`
+        let query = `SELECT Title,VideoDesc as Description,ThumbnailURL,PublishTime FROM VideoData ORDER BY PublishTime DESC LIMIT ${Math.max(10,res_per_page)} offset ${Math.max(0,offset)}`
         let resp = await mysql.query(query);
         mysql.end()
 
