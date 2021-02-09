@@ -2,9 +2,9 @@
 a simple backend api and service to fetch and upload Youtube video data using youtube Api
 
 ## Tech Used
-> NodeJS for backend service
-> MySQL database to store the data
-> AWS for deploying the API for demo
+- NodeJS for backend service
+- MySQL database to store the data
+- AWS for deploying the API for demo
 
 ## How to run this project
 
@@ -26,7 +26,7 @@ You will need to create a a file named config.json in the source directory which
 
 ## demo of the api deployed in Aws APi gateway:
 
-[Click here for getVideoData API](https://tfo65of7aj.execute-api.ap-south-1.amazonaws.com/Stage/getVideoData).
+[Click here for getVideoData API](https://db9nor25a0.execute-api.ap-south-1.amazonaws.com/prod/getVideoData).
 
 parameters for the api
 
