@@ -32,4 +32,4 @@ parameters for the api
 
 1. res_per_page : Max number of results to be fetched from database (default value is 10)
 2. page_no : page number (if using pagination technique) default value is 1
-
+ 
